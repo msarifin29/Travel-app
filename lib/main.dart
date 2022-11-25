@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:travel/src/const/themes.dart';
 import 'package:travel/src/view/dashboard_page.dart';
 import 'package:travel/src/view/login_view.dart';
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(useMaterial3: true, brightness: Brightness.light),
+      theme: lightTheme,
       home: const LoginView(),
     );
   }
