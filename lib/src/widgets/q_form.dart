@@ -9,13 +9,13 @@ class QForm extends StatelessWidget {
       required this.label,
       required this.controller,
       this.inputType,
-      required this.iconData})
+      this.iconData})
       : super(key: key);
 
   final String label;
   final TextEditingController controller;
   final TextInputType? inputType;
-  final Widget iconData;
+  final Widget? iconData;
   @override
   Widget build(BuildContext context) {
     return TextFormField(

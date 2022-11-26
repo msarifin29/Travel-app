@@ -3,13 +3,15 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:travel/src/const/app_color.dart';
 import 'package:travel/src/const/app_size.dart';
 import 'package:travel/src/const/app_string.dart';
+import 'package:travel/src/routes/string_route.dart';
 import 'package:travel/src/widgets/primary_button.dart';
 
 import '../widgets/q_form.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class SignInView extends StatelessWidget {
+  const SignInView({super.key});
 
+  static const route = signIn;
   @override
   Widget build(BuildContext context) {
     final emailC = TextEditingController();
@@ -62,7 +64,9 @@ class LoginView extends StatelessWidget {
                     height: AppSize.size12,
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, forgetPassword);
+                    },
                     style: ButtonStyle(
                       foregroundColor:
                           MaterialStateProperty.all<Color>(blueColor),
@@ -73,7 +77,9 @@ class LoginView extends StatelessWidget {
                     height: AppSize.size40,
                   ),
                   KPrimaryButton(
-                    onPress: () {},
+                    onPress: () {
+                      Navigator.pushReplacementNamed(context, dashboard);
+                    },
                     title: "Sign in",
                     width: size.width * 0.9,
                   ),
@@ -91,7 +97,9 @@ class LoginView extends StatelessWidget {
                     style: Theme.of(context).textTheme.headline6,
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, signUp);
+                    },
                     child: const Text("Sign up"),
                   ),
                 ],
@@ -109,7 +117,9 @@ class LoginView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SvgPicture.asset(facebook),
-              SvgPicture.asset(instagram),
+              SvgPicture.asset(
+                instagram,
+              ),
               SvgPicture.asset(twitter),
             ],
           )

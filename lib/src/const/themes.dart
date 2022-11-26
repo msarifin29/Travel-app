@@ -10,6 +10,10 @@ ThemeData get lightTheme => ThemeData(
             fontSize: AppSize.size26,
             fontWeight: FontWeight.w600,
             color: lightBlackColor),
+        headline4: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: AppSize.size18,
+            color: Colors.black),
         headline5: TextStyle(
             fontWeight: FontWeight.w400,
             fontSize: AppSize.size16,
